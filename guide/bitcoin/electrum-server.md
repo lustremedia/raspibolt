@@ -98,7 +98,7 @@ We get the latest release of the Electrs source code, verify it, compile it to a
   Other releases might not have been properly tested with the rest of the RaspiBolt configuration, though.
 
   ```sh
-  $ VERSION="0.9.14"
+  $ VERSION="0.10.8"
   $ mkdir /home/admin/rust
   $ cd /home/admin/rust
   $ git clone --branch v$VERSION https://github.com/romanz/electrs.git
@@ -163,7 +163,6 @@ We get the latest release of the Electrs source code, verify it, compile it to a
 
   # Logging
   log_filters = "INFO"
-  timestamp = true
   ```
 
 * Let's start Electrs manually first to check if everything runs as expected.
@@ -174,7 +173,7 @@ We get the latest release of the Electrs source code, verify it, compile it to a
   ```
 
   ```sh
-  Starting electrs 0.9.14 on aarch64 linux with Config { network: Bitcoin, db_path: "/data/electrs/db/bitcoin", daemon_dir: "/data/bitcoin", daemon_auth: CookieFile("/data/bitcoin/.cookie"), daemon_rpc_addr: 127.0.0.1:8332, daemon_p2p_addr: 127.0.0.1:8333, electrum_rpc_addr: 127.0.0.1:50001, monitoring_addr: 127.0.0.1:4224, wait_duration: 10s, jsonrpc_timeout: 15s, index_batch_size: 10, index_lookup_limit: Some(1000), reindex_last_blocks: 0, auto_reindex: true, ignore_mempool: false, sync_once: false, disable_electrum_rpc: false, server_banner: "Welcome to electrs 0.9.14 (Electrum Rust Server)!", args: [] }
+  Starting electrs 0.10.8 on aarch64 linux with Config { network: Bitcoin, db_path: "/data/electrs/db/bitcoin", daemon_dir: "/data/bitcoin", daemon_auth: CookieFile("/data/bitcoin/.cookie"), daemon_rpc_addr: 127.0.0.1:8332, daemon_p2p_addr: 127.0.0.1:8333, electrum_rpc_addr: 127.0.0.1:50001, monitoring_addr: 127.0.0.1:4224, wait_duration: 10s, jsonrpc_timeout: 15s, index_batch_size: 10, index_lookup_limit: Some(1000), reindex_last_blocks: 0, auto_reindex: true, ignore_mempool: false, sync_once: false, disable_electrum_rpc: false, server_banner: "Welcome to electrs 0.9.14 (Electrum Rust Server)!", args: [] }
   [2021-11-09T07:09:42.744Z INFO  electrs::metrics::metrics_impl] serving Prometheus metrics on 127.0.0.1:4224
   [2021-11-09T07:09:42.744Z INFO  electrs::server] serving Electrum RPC on 127.0.0.1:50001
   [2021-11-09T07:09:42.812Z INFO  electrs::db] "/data/electrs/db/bitcoin": 0 SST files, 0 GB, 0 Grows
